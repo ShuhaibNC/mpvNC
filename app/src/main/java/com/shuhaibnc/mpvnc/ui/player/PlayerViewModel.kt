@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player
 
-import `is`.xyz.mpv.MPVLib
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.media.AudioManager
@@ -24,6 +23,7 @@ import com.shuhaibnc.mpvnc.preferences.GesturePreferences
 import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
 import com.shuhaibnc.mpvnc.ui.custombuttons.CustomButtonsUiState
 import com.shuhaibnc.mpvnc.ui.custombuttons.getButtons
+import `is`.xyz.mpv.MPVLib
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.CoroutineScope

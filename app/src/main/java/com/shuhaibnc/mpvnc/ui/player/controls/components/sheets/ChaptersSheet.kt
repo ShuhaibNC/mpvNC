@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
-import `is`.xyz.mpv.Utils
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -17,6 +16,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import dev.vivvvek.seeker.Segment
+import `is`.xyz.mpv.Utils
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable

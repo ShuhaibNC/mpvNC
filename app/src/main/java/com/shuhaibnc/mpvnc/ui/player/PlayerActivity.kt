@@ -1,8 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player
 
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.MPVNode
-import `is`.xyz.mpv.Utils
 import android.annotation.SuppressLint
 import android.app.PictureInPictureParams
 import android.content.BroadcastReceiver
@@ -56,6 +53,9 @@ import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.ui.player.controls.PlayerControls
 import com.shuhaibnc.mpvnc.ui.theme.MpvKtTheme
+import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.MPVNode
+import `is`.xyz.mpv.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch

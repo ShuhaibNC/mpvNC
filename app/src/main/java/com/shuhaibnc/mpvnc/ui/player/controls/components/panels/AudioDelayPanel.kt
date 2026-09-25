@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
-import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,6 +24,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.AudioPreferences
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
 import org.koin.compose.koinInject
 
 @Composable

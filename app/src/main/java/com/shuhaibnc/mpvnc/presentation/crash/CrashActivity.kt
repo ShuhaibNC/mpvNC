@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.presentation.crash
 
-import `is`.xyz.mpv.Utils
 import android.app.Activity
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -63,6 +62,7 @@ import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.ui.theme.DarkMode
 import com.shuhaibnc.mpvnc.ui.theme.MpvKtTheme
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.launch

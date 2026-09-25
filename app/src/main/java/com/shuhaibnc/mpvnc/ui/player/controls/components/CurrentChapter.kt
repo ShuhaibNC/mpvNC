@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components
 
-import `is`.xyz.mpv.Utils
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.fadeIn
@@ -31,6 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import dev.vivvvek.seeker.Segment
+import `is`.xyz.mpv.Utils
 
 @Composable
 fun CurrentChapter(

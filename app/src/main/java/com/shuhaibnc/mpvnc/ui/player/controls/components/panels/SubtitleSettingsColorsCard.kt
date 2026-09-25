@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
-import `is`.xyz.mpv.MPVLib
 import androidx.annotation.StringRes
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -47,6 +46,7 @@ import com.shuhaibnc.mpvnc.presentation.components.TintedSliderItem
 import com.shuhaibnc.mpvnc.ui.player.controls.CARDS_MAX_WIDTH
 import com.shuhaibnc.mpvnc.ui.player.controls.panelCardsColors
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
 import org.koin.compose.koinInject
 
 @Composable

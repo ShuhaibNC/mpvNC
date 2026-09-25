@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
-import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -34,6 +33,7 @@ import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.presentation.components.PlayerSheet
 import com.shuhaibnc.mpvnc.presentation.components.SliderItem
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 import me.zhanghai.compose.preference.SwitchPreference
 import org.koin.compose.koinInject

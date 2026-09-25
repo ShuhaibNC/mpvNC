@@ -1,7 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls
 
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.Utils
 import android.os.Build
 import androidx.activity.compose.LocalActivity
 import androidx.compose.animation.AnimatedVisibility
@@ -88,6 +86,8 @@ import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
 import com.shuhaibnc.mpvnc.ui.player.controls.components.sheets.toFixed
 import com.shuhaibnc.mpvnc.ui.theme.playerRippleConfiguration
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.Utils
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.delay

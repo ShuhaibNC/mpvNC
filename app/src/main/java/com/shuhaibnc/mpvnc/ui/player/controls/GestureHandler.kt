@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls
 
-import `is`.xyz.mpv.MPVLib
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
@@ -50,6 +49,7 @@ import com.shuhaibnc.mpvnc.ui.player.PlayerUpdates
 import com.shuhaibnc.mpvnc.ui.player.PlayerViewModel
 import com.shuhaibnc.mpvnc.ui.player.controls.components.DoubleTapSeekTriangles
 import com.shuhaibnc.mpvnc.ui.theme.playerRippleConfiguration
+import `is`.xyz.mpv.MPVLib
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import org.koin.compose.koinInject

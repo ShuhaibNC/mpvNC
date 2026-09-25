@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components
 
-import `is`.xyz.mpv.Utils
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -25,6 +24,7 @@ import com.shuhaibnc.mpvnc.ui.theme.spacing
 import dev.vivvvek.seeker.Seeker
 import dev.vivvvek.seeker.SeekerDefaults
 import dev.vivvvek.seeker.Segment
+import `is`.xyz.mpv.Utils
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 

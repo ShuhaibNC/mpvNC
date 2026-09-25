@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
-import `is`.xyz.mpv.MPVLib
 import android.text.format.DateUtils
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -64,6 +63,7 @@ import com.shuhaibnc.mpvnc.presentation.components.PlayerSheet
 import com.shuhaibnc.mpvnc.ui.player.execute
 import com.shuhaibnc.mpvnc.ui.player.executeLongClick
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
 import kotlinx.collections.immutable.ImmutableList
 import org.koin.compose.koinInject
 

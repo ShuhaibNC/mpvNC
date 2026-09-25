@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
-import `is`.xyz.mpv.MPVLib
 import android.annotation.SuppressLint
 import androidx.annotation.StringRes
 import androidx.compose.foundation.horizontalScroll
@@ -55,6 +54,7 @@ import com.shuhaibnc.mpvnc.ui.player.controls.CARDS_MAX_WIDTH
 import com.shuhaibnc.mpvnc.ui.player.controls.panelCardsColors
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.yubyf.truetypeparser.TTFFile
+import `is`.xyz.mpv.MPVLib
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

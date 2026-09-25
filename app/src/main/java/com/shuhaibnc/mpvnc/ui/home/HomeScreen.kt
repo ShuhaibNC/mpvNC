@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.home
 
-import `is`.xyz.mpv.Utils.PROTOCOLS
 import android.content.Context
 import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -47,6 +46,7 @@ import com.shuhaibnc.mpvnc.ui.player.PlayerActivity
 import com.shuhaibnc.mpvnc.ui.preferences.PreferencesScreen
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import `is`.xyz.mpv.Utils.PROTOCOLS
 import kotlinx.serialization.Serializable
 
 @Serializable

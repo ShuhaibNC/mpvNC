@@ -1,6 +1,5 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
-import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,6 +38,7 @@ import com.shuhaibnc.mpvnc.ui.player.Debanding
 import com.shuhaibnc.mpvnc.ui.player.controls.CARDS_MAX_WIDTH
 import com.shuhaibnc.mpvnc.ui.player.controls.panelCardsColors
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import `is`.xyz.mpv.MPVLib
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 import org.koin.compose.koinInject
 
