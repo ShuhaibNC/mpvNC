@@ -12,11 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import dev.vivvvek.seeker.Segment
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.ui.player.Sheets
 import com.shuhaibnc.mpvnc.ui.player.controls.components.ControlsButton
 import com.shuhaibnc.mpvnc.ui.player.controls.components.CurrentChapter
+import dev.vivvvek.seeker.Segment
 
 @Composable
 fun BottomLeftPlayerControls(

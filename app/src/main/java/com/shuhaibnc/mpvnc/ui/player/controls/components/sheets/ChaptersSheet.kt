@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
+import `is`.xyz.mpv.Utils
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -13,11 +14,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import dev.vivvvek.seeker.Segment
-import `is`.xyz.mpv.Utils
-import kotlinx.collections.immutable.ImmutableList
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import dev.vivvvek.seeker.Segment
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun ChaptersSheet(

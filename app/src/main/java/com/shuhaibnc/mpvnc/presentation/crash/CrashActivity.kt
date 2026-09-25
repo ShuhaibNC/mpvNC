@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.presentation.crash
 
+import `is`.xyz.mpv.Utils
 import android.app.Activity
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -54,11 +55,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
 import androidx.lifecycle.coroutineScope
-import `is`.xyz.mpv.Utils
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.NonCancellable
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import com.shuhaibnc.mpvnc.BuildConfig
 import com.shuhaibnc.mpvnc.MainActivity
 import com.shuhaibnc.mpvnc.R
@@ -67,6 +63,10 @@ import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.ui.theme.DarkMode
 import com.shuhaibnc.mpvnc.ui.theme.MpvKtTheme
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 import java.io.BufferedReader
 import java.io.File

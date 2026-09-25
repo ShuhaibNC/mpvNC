@@ -19,10 +19,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import kotlinx.collections.immutable.ImmutableList
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.ui.player.TrackNode
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import kotlinx.collections.immutable.ImmutableList
 import me.zhanghai.compose.preference.FooterPreference
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 

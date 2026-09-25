@@ -9,8 +9,8 @@ import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import kotlinx.collections.immutable.ImmutableList
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun MultiChoiceSegmentedButton(

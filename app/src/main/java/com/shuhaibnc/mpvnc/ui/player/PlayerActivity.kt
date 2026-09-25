@@ -1,5 +1,8 @@
 package com.shuhaibnc.mpvnc.ui.player
 
+import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.MPVNode
+import `is`.xyz.mpv.Utils
 import android.annotation.SuppressLint
 import android.app.PictureInPictureParams
 import android.content.BroadcastReceiver
@@ -42,12 +45,6 @@ import androidx.media.AudioAttributesCompat
 import androidx.media.AudioFocusRequestCompat
 import androidx.media.AudioManagerCompat
 import com.github.k1rakishou.fsaf.FileManager
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.MPVNode
-import `is`.xyz.mpv.Utils
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 import com.shuhaibnc.mpvnc.database.entities.CustomButtonEntity
 import com.shuhaibnc.mpvnc.database.entities.PlaybackStateEntity
 import com.shuhaibnc.mpvnc.databinding.PlayerLayoutBinding
@@ -59,6 +56,9 @@ import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.ui.player.controls.PlayerControls
 import com.shuhaibnc.mpvnc.ui.theme.MpvKtTheme
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import java.io.File
 

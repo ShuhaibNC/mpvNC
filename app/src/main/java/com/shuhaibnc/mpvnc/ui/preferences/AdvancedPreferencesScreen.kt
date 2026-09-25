@@ -39,10 +39,6 @@ import androidx.compose.ui.util.fastJoinToString
 import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
 import com.github.k1rakishou.fsaf.FileManager
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.database.MpvKtDatabase
 import com.shuhaibnc.mpvnc.preferences.AdvancedPreferences
@@ -51,6 +47,10 @@ import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.presentation.components.ConfirmDialog
 import com.shuhaibnc.mpvnc.presentation.crash.CrashActivity
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.Preference
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 import me.zhanghai.compose.preference.SwitchPreference

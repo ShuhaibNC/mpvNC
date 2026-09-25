@@ -1,5 +1,8 @@
 package com.shuhaibnc.mpvnc.ui.player
 
+import `is`.xyz.mpv.BaseMPVView
+import `is`.xyz.mpv.KeyMapping
+import `is`.xyz.mpv.MPVLib
 import android.content.Context
 import android.os.Build
 import android.os.Environment
@@ -7,9 +10,6 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.KeyCharacterMap
 import android.view.KeyEvent
-import `is`.xyz.mpv.BaseMPVView
-import `is`.xyz.mpv.KeyMapping
-import `is`.xyz.mpv.MPVLib
 import com.shuhaibnc.mpvnc.preferences.AdvancedPreferences
 import com.shuhaibnc.mpvnc.preferences.AudioPreferences
 import com.shuhaibnc.mpvnc.preferences.DecoderPreferences

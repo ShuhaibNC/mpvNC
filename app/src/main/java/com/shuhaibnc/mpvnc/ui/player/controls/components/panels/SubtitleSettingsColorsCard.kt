@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
+import `is`.xyz.mpv.MPVLib
 import androidx.annotation.StringRes
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -37,7 +38,6 @@ import androidx.core.graphics.blue
 import androidx.core.graphics.green
 import androidx.core.graphics.red
 import androidx.core.graphics.toColorInt
-import `is`.xyz.mpv.MPVLib
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.Preference

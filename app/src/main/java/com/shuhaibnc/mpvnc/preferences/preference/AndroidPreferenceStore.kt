@@ -3,8 +3,6 @@ package com.shuhaibnc.mpvnc.preferences.preference
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
-import kotlinx.coroutines.channels.awaitClose
-import kotlinx.coroutines.flow.callbackFlow
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.BooleanPrimitive
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.FloatPrimitive
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.IntPrimitive
@@ -12,6 +10,8 @@ import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.LongPrimitiv
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.Object
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.StringPrimitive
 import com.shuhaibnc.mpvnc.preferences.preference.AndroidPreference.StringSetPrimitive
+import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.flow.callbackFlow
 
 class AndroidPreferenceStore(
   context: Context,

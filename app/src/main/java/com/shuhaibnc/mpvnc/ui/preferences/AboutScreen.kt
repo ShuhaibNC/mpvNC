@@ -31,15 +31,15 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
-import compose.icons.SimpleIcons
-import compose.icons.simpleicons.Github
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.BuildConfig
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.presentation.crash.CrashActivity.Companion.collectDeviceInfo
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import compose.icons.SimpleIcons
+import compose.icons.simpleicons.Github
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.Preference
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 

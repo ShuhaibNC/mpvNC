@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player
 
+import `is`.xyz.mpv.MPVLib
 import android.content.Context
 import android.content.pm.ActivityInfo
 import android.media.AudioManager
@@ -15,7 +16,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.CreationExtras
-import `is`.xyz.mpv.MPVLib
+import com.shuhaibnc.mpvnc.R
+import com.shuhaibnc.mpvnc.database.MpvKtDatabase
+import com.shuhaibnc.mpvnc.database.entities.CustomButtonEntity
+import com.shuhaibnc.mpvnc.preferences.AudioPreferences
+import com.shuhaibnc.mpvnc.preferences.GesturePreferences
+import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
+import com.shuhaibnc.mpvnc.ui.custombuttons.CustomButtonsUiState
+import com.shuhaibnc.mpvnc.ui.custombuttons.getButtons
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.CoroutineScope
@@ -30,14 +38,6 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
-import com.shuhaibnc.mpvnc.R
-import com.shuhaibnc.mpvnc.database.MpvKtDatabase
-import com.shuhaibnc.mpvnc.database.entities.CustomButtonEntity
-import com.shuhaibnc.mpvnc.preferences.AudioPreferences
-import com.shuhaibnc.mpvnc.preferences.GesturePreferences
-import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
-import com.shuhaibnc.mpvnc.ui.custombuttons.CustomButtonsUiState
-import com.shuhaibnc.mpvnc.ui.custombuttons.getButtons
 import org.koin.java.KoinJavaComponent.inject
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty

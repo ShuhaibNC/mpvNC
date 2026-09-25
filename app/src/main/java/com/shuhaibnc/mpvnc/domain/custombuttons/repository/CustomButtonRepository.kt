@@ -1,7 +1,7 @@
 package com.shuhaibnc.mpvnc.domain.custombuttons.repository
 
-import kotlinx.coroutines.flow.Flow
 import com.shuhaibnc.mpvnc.database.entities.CustomButtonEntity
+import kotlinx.coroutines.flow.Flow
 
 interface CustomButtonRepository {
   fun getCustomButtons(): Flow<List<CustomButtonEntity>>

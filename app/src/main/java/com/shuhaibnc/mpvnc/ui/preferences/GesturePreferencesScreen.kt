@@ -22,8 +22,6 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import kotlinx.collections.immutable.toImmutableList
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.GesturePreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
@@ -31,6 +29,8 @@ import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.player.CustomKeyCodes
 import com.shuhaibnc.mpvnc.ui.player.SingleActionGesture
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.FooterPreference
 import me.zhanghai.compose.preference.ListPreference
 import me.zhanghai.compose.preference.PreferenceCategory

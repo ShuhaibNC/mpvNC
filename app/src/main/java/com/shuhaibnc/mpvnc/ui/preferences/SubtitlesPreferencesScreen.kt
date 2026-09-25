@@ -24,12 +24,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 import me.zhanghai.compose.preference.SwitchPreference
 import me.zhanghai.compose.preference.TextFieldPreference

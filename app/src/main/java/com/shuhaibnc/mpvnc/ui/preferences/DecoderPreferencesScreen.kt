@@ -17,13 +17,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.DecoderPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.player.Debanding
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.ListPreference
 import me.zhanghai.compose.preference.ProvidePreferenceLocals
 import me.zhanghai.compose.preference.SwitchPreference

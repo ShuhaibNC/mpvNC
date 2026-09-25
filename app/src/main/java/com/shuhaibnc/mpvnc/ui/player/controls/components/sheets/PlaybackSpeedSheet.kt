@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
+import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,7 +28,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import `is`.xyz.mpv.MPVLib
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.AudioPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState

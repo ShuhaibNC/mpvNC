@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
+import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -23,7 +24,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import `is`.xyz.mpv.MPVLib
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.deleteAndGet

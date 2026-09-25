@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
-import kotlinx.serialization.Serializable
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
@@ -28,6 +27,7 @@ import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.player.PlayerOrientation
 import com.shuhaibnc.mpvnc.ui.player.controls.components.sheets.toFixed
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
+import kotlinx.serialization.Serializable
 import me.zhanghai.compose.preference.ListPreference
 import me.zhanghai.compose.preference.PreferenceCategory
 import me.zhanghai.compose.preference.ProvidePreferenceLocals

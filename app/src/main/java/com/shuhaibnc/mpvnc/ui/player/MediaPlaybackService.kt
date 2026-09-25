@@ -1,5 +1,7 @@
 package com.shuhaibnc.mpvnc.ui.player
 
+import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.MPVNode
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -22,8 +24,6 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.media.MediaBrowserServiceCompat
 import androidx.media.session.MediaButtonReceiver
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.MPVNode
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.GesturePreferences
 import org.koin.android.ext.android.inject

@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
+import `is`.xyz.mpv.MPVLib
 import androidx.annotation.StringRes
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
@@ -42,14 +43,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import `is`.xyz.mpv.MPVLib
-import kotlinx.coroutines.delay
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.SubtitlesPreferences
 import com.shuhaibnc.mpvnc.presentation.components.OutlinedNumericChooser
 import com.shuhaibnc.mpvnc.ui.player.controls.CARDS_MAX_WIDTH
 import com.shuhaibnc.mpvnc.ui.player.controls.panelCardsColors
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import kotlinx.coroutines.delay
 import org.koin.compose.koinInject
 import kotlin.math.round
 

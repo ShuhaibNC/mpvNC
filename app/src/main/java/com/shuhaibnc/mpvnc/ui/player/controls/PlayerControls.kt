@@ -1,5 +1,7 @@
 package com.shuhaibnc.mpvnc.ui.player.controls
 
+import `is`.xyz.mpv.MPVLib
+import `is`.xyz.mpv.Utils
 import android.os.Build
 import androidx.activity.compose.LocalActivity
 import androidx.compose.animation.AnimatedVisibility
@@ -61,12 +63,6 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.Utils
-import kotlinx.collections.immutable.persistentListOf
-import kotlinx.collections.immutable.toImmutableList
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.update
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.AudioPreferences
 import com.shuhaibnc.mpvnc.preferences.PlayerPreferences
@@ -92,6 +88,10 @@ import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
 import com.shuhaibnc.mpvnc.ui.player.controls.components.sheets.toFixed
 import com.shuhaibnc.mpvnc.ui.theme.playerRippleConfiguration
 import com.shuhaibnc.mpvnc.ui.theme.spacing
+import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.update
 import org.koin.compose.koinInject
 import kotlin.math.abs
 

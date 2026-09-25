@@ -2,9 +2,9 @@ package com.shuhaibnc.mpvnc.ui.player.controls.components.sheets
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import kotlinx.collections.immutable.toImmutableList
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.ui.player.Decoder
+import kotlinx.collections.immutable.toImmutableList
 
 @Composable
 fun DecodersSheet(

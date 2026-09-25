@@ -1,5 +1,6 @@
 package com.shuhaibnc.mpvnc.ui.player.controls.components.panels
 
+import `is`.xyz.mpv.MPVLib
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,7 +28,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import `is`.xyz.mpv.MPVLib
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.preferences.DecoderPreferences
 import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
