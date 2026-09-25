@@ -19,8 +19,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Folder
-import androidx.compose.material.icons.filled.FolderOpen
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -47,8 +47,8 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.presentation.Screen
-import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
 import com.shuhaibnc.mpvnc.ui.preferences.PreferencesScreen
+import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
 import kotlinx.coroutines.Dispatchers
@@ -97,16 +97,16 @@ object VideoFoldersScreen : Screen {
           actions = {
             IconButton(onClick = { backstack.add(OpenScreen) }) {
               Icon(
-                Icons.Default.FolderOpen,
+                Icons.Default.Add,
                 contentDescription = stringResource(id = R.string.home_open),
-                tint = YOUTUBE_RED,
+                tint = accentColor(),
               )
             }
             IconButton(onClick = { backstack.add(PreferencesScreen) }) {
               Icon(
                 Icons.Default.Settings,
                 contentDescription = stringResource(id = R.string.pref_preferences),
-                tint = YOUTUBE_RED,
+                tint = accentColor(),
               )
             }
           },
@@ -152,7 +152,7 @@ object VideoFoldersScreen : Screen {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
           ) {
-            CircularProgressIndicator(color = YOUTUBE_RED)
+            CircularProgressIndicator(color = accentColor())
           }
         }
 
@@ -189,7 +189,7 @@ object VideoFoldersScreen : Screen {
                 Icon(
                   Icons.Default.Folder,
                   contentDescription = null,
-                  tint = YOUTUBE_RED,
+                  tint = accentColor(),
                   modifier = Modifier.size(40.dp),
                 )
                 Column(modifier = Modifier.weight(1f)) {

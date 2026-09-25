@@ -38,7 +38,7 @@ import androidx.core.net.toUri
 import com.github.k1rakishou.fsaf.FileManager
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.presentation.Screen
-import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
+import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
 import `is`.xyz.mpv.Utils.PROTOCOLS
@@ -94,7 +94,7 @@ object OpenScreen : Screen {
             horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.smaller),
             verticalAlignment = Alignment.CenterVertically,
           ) {
-            Icon(Icons.Default.Link, null, tint = YOUTUBE_RED)
+            Icon(Icons.Default.Link, null, tint = accentColor())
             Text(text = stringResource(R.string.home_open_url))
           }
         }
@@ -111,7 +111,7 @@ object OpenScreen : Screen {
             horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.smaller),
             verticalAlignment = Alignment.CenterVertically,
           ) {
-            Icon(Icons.Default.FileOpen, null, tint = YOUTUBE_RED)
+            Icon(Icons.Default.FileOpen, null, tint = accentColor())
             Text(text = stringResource(R.string.home_pick_file))
           }
         }
@@ -127,7 +127,7 @@ object OpenScreen : Screen {
             horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.smaller),
             verticalAlignment = Alignment.CenterVertically,
           ) {
-            Icon(Icons.Default.FolderOpen, null, tint = YOUTUBE_RED)
+            Icon(Icons.Default.FolderOpen, null, tint = accentColor())
             Text(text = stringResource(R.string.home_open_file_picker))
           }
         }

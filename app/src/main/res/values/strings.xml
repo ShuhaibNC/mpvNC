@@ -27,7 +27,7 @@
     <string name="pref_preferences">Preferences</string>
 
     <string name="pref_appearance_title">Appearance</string>
-    <string name="pref_appearance_summary">Dark mode, Material You</string>
+    <string name="pref_appearance_summary">Dark mode, Material You, accent color</string>
     <string name="pref_appearance_category_theme">Theme</string>
     <string name="pref_appearance_darkmode_system">System</string>
     <string name="pref_appearance_darkmode_light">Light</string>
@@ -35,6 +35,7 @@
     <string name="pref_appearance_material_you_title">Material You</string>
     <string name="pref_appearance_material_you_summary">Enable dynamic colors</string>
     <string name="pref_appearance_material_you_summary_disabled">Only available for Android 12 and newer.</string>
+    <string name="pref_appearance_accent_color_title">Accent color</string>
 
     <string name="pref_player">Player</string>
     <string name="pref_player_summary">Orientation, gestures and controls</string>
@@ -168,6 +169,7 @@
     <string name="pref_about_app_version_formatted" translatable="false">%s %s</string>
     <string name="pref_about_oss_libraries">Open source libraries</string>
     <string name="pref_about_privacy_policy">Privacy policy</string>
+    <string name="pref_about_made_by">Made by ShuhaibNC</string>
 
     <string name="player_sheets_add_ext_sub">Add external subtitles</string>
     <string name="player_sheets_add_ext_audio">Add external audio tracks</string>

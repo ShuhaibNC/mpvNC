@@ -20,6 +20,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.shuhaibnc.mpvnc.ui.player.controls.LocalPlayerButtonsClickEvent
+import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import dev.vivvvek.seeker.Seeker
 import dev.vivvvek.seeker.SeekerDefaults
@@ -27,9 +28,6 @@ import dev.vivvvek.seeker.Segment
 import `is`.xyz.mpv.Utils
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
-
-/** YouTube-style player accent, used for the seekbar and progress indicators. */
-val YOUTUBE_RED = Color(0xFFFF0000)
 
 @Composable
 fun SeekbarWithTimers(
@@ -71,8 +69,8 @@ fun SeekbarWithTimers(
         .let { (if (it.isNotEmpty() && it[0].start != 0f) persistentListOf(Segment("", 0f)) + it else it) + it },
       modifier = Modifier.weight(1f),
       colors = SeekerDefaults.seekerColors(
-        progressColor = YOUTUBE_RED,
-        thumbColor = YOUTUBE_RED,
+        progressColor = accentColor(),
+        thumbColor = accentColor(),
         trackColor = Color.White.copy(alpha = 0.3f),
         readAheadColor = Color.White.copy(alpha = 0.5f),
       ),

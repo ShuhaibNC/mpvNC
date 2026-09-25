@@ -38,7 +38,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.presentation.Screen
-import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
+import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
 import kotlinx.coroutines.Dispatchers
@@ -91,7 +91,7 @@ data class FolderVideosScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
           ) {
-            CircularProgressIndicator(color = YOUTUBE_RED)
+            CircularProgressIndicator(color = accentColor())
           }
         }
 
@@ -134,7 +134,7 @@ data class FolderVideosScreen(
                 Icon(
                   Icons.Default.Movie,
                   contentDescription = null,
-                  tint = YOUTUBE_RED,
+                  tint = accentColor(),
                   modifier = Modifier.size(40.dp),
                 )
                 Column(modifier = Modifier.weight(1f)) {

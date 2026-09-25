@@ -28,6 +28,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
@@ -131,6 +132,15 @@ object AboutScreen : Screen {
             Icon(imageVector = SimpleIcons.Github, contentDescription = null)
           }
         }
+        Text(
+          text = stringResource(id = R.string.pref_about_made_by),
+          style = MaterialTheme.typography.bodyMedium,
+          color = MaterialTheme.colorScheme.onSurfaceVariant,
+          textAlign = TextAlign.Center,
+          modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = MaterialTheme.spacing.medium),
+        )
       }
     }
   }

@@ -82,8 +82,8 @@ import com.shuhaibnc.mpvnc.ui.player.controls.components.MultipleSpeedPlayerUpda
 import com.shuhaibnc.mpvnc.ui.player.controls.components.SeekbarWithTimers
 import com.shuhaibnc.mpvnc.ui.player.controls.components.TextPlayerUpdate
 import com.shuhaibnc.mpvnc.ui.player.controls.components.VolumeSlider
-import com.shuhaibnc.mpvnc.ui.player.controls.components.YOUTUBE_RED
 import com.shuhaibnc.mpvnc.ui.player.controls.components.sheets.toFixed
+import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.playerRippleConfiguration
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import `is`.xyz.mpv.MPVLib
@@ -448,7 +448,7 @@ fun PlayerControls(
             modifier = Modifier
               .fillMaxWidth()
               .height(3.dp),
-            color = YOUTUBE_RED,
+            color = accentColor(),
             trackColor = Color.White.copy(alpha = 0.3f),
           )
         }
