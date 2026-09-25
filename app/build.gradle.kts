@@ -14,11 +14,11 @@ plugins {
 }
 
 android {
-  namespace = "live.mehiz.mpvkt"
+  namespace = "com.shuhaibnc.mpvnc"
   compileSdk = 36
 
   defaultConfig {
-    applicationId = "live.mehiz.mpvkt"
+    applicationId = "com.shuhaibnc.mpvnc"
     minSdk = 21
     targetSdk = 36
     versionCode = 12
