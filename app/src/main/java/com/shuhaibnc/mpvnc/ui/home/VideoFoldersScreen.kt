@@ -11,18 +11,25 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Folder
+import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.ViewList
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -43,17 +50,23 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.shuhaibnc.mpvnc.R
+import com.shuhaibnc.mpvnc.preferences.AppearancePreferences
+import com.shuhaibnc.mpvnc.preferences.preference.collectAsState
 import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.preferences.PreferencesScreen
+import com.shuhaibnc.mpvnc.ui.theme.FolderViewMode
 import com.shuhaibnc.mpvnc.ui.theme.accentColor
 import com.shuhaibnc.mpvnc.ui.theme.spacing
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
+import org.koin.compose.koinInject
 
 private data class VideoFolder(
   val bucketId: Long,
@@ -68,6 +81,8 @@ object VideoFoldersScreen : Screen {
   override fun Content() {
     val context = LocalContext.current
     val backstack = LocalBackStack.current
+    val preferences = koinInject<AppearancePreferences>()
+    val viewMode by preferences.folderViewMode.collectAsState()
     val mediaPermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
       Manifest.permission.READ_MEDIA_VIDEO
     } else {
@@ -95,6 +110,19 @@ object VideoFoldersScreen : Screen {
             )
           },
           actions = {
+            IconButton(
+              onClick = {
+                preferences.folderViewMode.set(
+                  if (viewMode == FolderViewMode.Grid) FolderViewMode.List else FolderViewMode.Grid,
+                )
+              },
+            ) {
+              Icon(
+                if (viewMode == FolderViewMode.Grid) Icons.Default.ViewList else Icons.Default.GridView,
+                contentDescription = stringResource(id = R.string.home_folder_view),
+                tint = accentColor(),
+              )
+            }
             IconButton(onClick = { backstack.add(OpenScreen) }) {
               Icon(
                 Icons.Default.Add,
@@ -169,43 +197,93 @@ object VideoFoldersScreen : Screen {
         }
 
         else -> {
-          LazyColumn(
-            modifier = Modifier
-              .fillMaxSize()
-              .padding(padding),
-          ) {
-            items(folders, key = { it.bucketId }) { folder ->
-              Row(
-                modifier = Modifier
-                  .clickable { backstack.add(FolderVideosScreen(folder.bucketId, folder.name)) }
-                  .fillMaxWidth()
-                  .padding(
-                    vertical = MaterialTheme.spacing.small,
-                    horizontal = MaterialTheme.spacing.medium,
-                  ),
-                horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
-                verticalAlignment = Alignment.CenterVertically,
-              ) {
-                Icon(
-                  Icons.Default.Folder,
-                  contentDescription = null,
-                  tint = accentColor(),
-                  modifier = Modifier.size(40.dp),
-                )
-                Column(modifier = Modifier.weight(1f)) {
-                  Text(
-                    text = folder.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                  )
-                  Text(
-                    text = pluralStringResource(
-                      R.plurals.plural_videos,
-                      folder.videoCount,
-                      folder.videoCount,
+          if (viewMode == FolderViewMode.Grid) {
+            LazyVerticalGrid(
+              columns = GridCells.Adaptive(minSize = 150.dp),
+              modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
+              contentPadding = PaddingValues(MaterialTheme.spacing.medium),
+              verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.medium),
+              horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.medium),
+            ) {
+              items(folders, key = { it.bucketId }) { folder ->
+                Card(
+                  onClick = { backstack.add(FolderVideosScreen(folder.bucketId, folder.name)) },
+                  modifier = Modifier.fillMaxWidth(),
+                ) {
+                  Column(
+                    modifier = Modifier
+                      .fillMaxWidth()
+                      .padding(MaterialTheme.spacing.medium),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
+                  ) {
+                    Icon(
+                      Icons.Default.Folder,
+                      contentDescription = null,
+                      tint = accentColor(),
+                      modifier = Modifier.size(48.dp),
+                    )
+                    Text(
+                      text = folder.name,
+                      style = MaterialTheme.typography.bodyLarge,
+                      textAlign = TextAlign.Center,
+                      maxLines = 2,
+                      overflow = TextOverflow.Ellipsis,
+                    )
+                    Text(
+                      text = pluralStringResource(
+                        R.plurals.plural_videos,
+                        folder.videoCount,
+                        folder.videoCount,
+                      ),
+                      style = MaterialTheme.typography.bodyMedium,
+                      color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                  }
+                }
+              }
+            }
+          } else {
+            LazyColumn(
+              modifier = Modifier
+                .fillMaxSize()
+                .padding(padding),
+            ) {
+              items(folders, key = { it.bucketId }) { folder ->
+                Row(
+                  modifier = Modifier
+                    .clickable { backstack.add(FolderVideosScreen(folder.bucketId, folder.name)) }
+                    .fillMaxWidth()
+                    .padding(
+                      vertical = MaterialTheme.spacing.small,
+                      horizontal = MaterialTheme.spacing.medium,
                     ),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                  horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
+                  verticalAlignment = Alignment.CenterVertically,
+                ) {
+                  Icon(
+                    Icons.Default.Folder,
+                    contentDescription = null,
+                    tint = accentColor(),
+                    modifier = Modifier.size(40.dp),
                   )
+                  Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                      text = folder.name,
+                      style = MaterialTheme.typography.bodyLarge,
+                    )
+                    Text(
+                      text = pluralStringResource(
+                        R.plurals.plural_videos,
+                        folder.videoCount,
+                        folder.videoCount,
+                      ),
+                      style = MaterialTheme.typography.bodyMedium,
+                      color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                  }
                 }
               }
             }

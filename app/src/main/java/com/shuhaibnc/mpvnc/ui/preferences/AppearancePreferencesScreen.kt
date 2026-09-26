@@ -45,6 +45,7 @@ import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.presentation.preferences.MultiChoiceSegmentedButton
 import com.shuhaibnc.mpvnc.ui.theme.ACCENT_COLORS
 import com.shuhaibnc.mpvnc.ui.theme.DarkMode
+import com.shuhaibnc.mpvnc.ui.theme.FolderViewMode
 import com.shuhaibnc.mpvnc.ui.utils.LocalBackStack
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -113,6 +114,15 @@ object AppearancePreferencesScreen : Screen {
             title = { Text(text = stringResource(id = R.string.pref_appearance_accent_color_title)) },
           )
           AccentColorPicker(preferences.accentColor)
+          PreferenceCategory(
+            title = { Text(text = stringResource(id = R.string.pref_appearance_category_folder_view)) },
+          )
+          val folderViewMode by preferences.folderViewMode.collectAsState()
+          MultiChoiceSegmentedButton(
+            choices = FolderViewMode.entries.map { context.getString(it.titleRes) }.toImmutableList(),
+            selectedIndices = persistentListOf(FolderViewMode.entries.indexOf(folderViewMode)),
+            onClick = { preferences.folderViewMode.set(FolderViewMode.entries[it]) },
+          )
         }
       }
     }
