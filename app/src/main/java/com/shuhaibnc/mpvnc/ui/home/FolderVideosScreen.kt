@@ -33,7 +33,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.dp
 import com.shuhaibnc.mpvnc.R
 import com.shuhaibnc.mpvnc.presentation.Screen
 import com.shuhaibnc.mpvnc.ui.theme.accentColor
