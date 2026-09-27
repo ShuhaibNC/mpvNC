@@ -21,8 +21,8 @@ android {
     applicationId = "com.shuhaibnc.mpvnc"
     minSdk = 21
     targetSdk = 36
-    versionCode = 12
-    versionName = "0.1.6"
+    versionCode = 13
+    versionName = "0.1.7-test1"
 
     vectorDrawables {
       useSupportLibrary = true
